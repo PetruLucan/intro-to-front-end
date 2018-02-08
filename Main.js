@@ -25,7 +25,7 @@ myphone = {
     lenght: "20cm",
     weight: "35g"
 };
-alert(typeof myphone);
+//alert(typeof myphone);
 
 //myphone.old = "1999";
 //console.log (myphone);
