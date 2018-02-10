@@ -68,7 +68,7 @@ log(sum(nr2, sum(nr2, sum(nr2, nr2))));
 function mul(X, Y) {
     return X * Y
 }
-mul(2, 9)
+log(mul(2, 9));
 
 //ex 10
 //input 1 parameter
@@ -146,7 +146,223 @@ function aproxF(a, b) {
     if (a > 0) {
         return bMax;
     }
-     else {
+    else {
         return bMin;
     }
+}//// Tema
+
+log("Temaaaa");
+//Ex1
+function ex1(P) {
+
+    if (P == 2000) { return ("2000 Comet") }
+    else {
+        if (P < 2000 && P > 1990) { return ("Millenials") }
+        else {
+            if (P < 1990) { return ("old folks") }
+            else {
+                if (P > 2000 && P !== 2018) { return ("New Folks") }
+                else {
+                    if (P == 2018) { return ("2018!!!") }
+                }
+            }
+        }
+    }
 }
+log(ex1(2018));
+
+log("EX2");
+
+//Ex 2
+function ex2(p2) {
+
+    if (p2 < 0) { return p2 }
+    else { return (-p2) }
+}
+log(ex2(5))
+
+log("EX3")
+
+//Ex3
+log(sum(double(mul(7, 4)), sum(7, 4)));
+log(aproxF(sum(double(mul(7, 4)), sum(7, 4))));
+log(sum(nr1, -nr2));
+
+log("EX4")
+
+//ex4
+
+function cub(X) {
+    return mul(X, mul(X, X));
+}
+
+log(cub(3))
+
+log("EX5")
+
+//EX 5
+function min(p1, p2, p3) {
+    if (p1 <= p2 && p1 <= p3) { return (p1) }
+    else {
+        if (p2 <= p3 && p2 <= p3) { return (p2) }
+        else {
+            if (p3 <= p1 && p3 <= p2) { return (p3) }
+        }
+    }
+}
+log(min(-1, 0, -3));
+
+log("EX6")
+
+//EX 6 
+function length(a) {
+    return a.length;
+}
+log(length("Romania"));
+
+//Ex7
+log("EX7")
+
+
+function replaceF(a, b) {
+    return a.replace(/Home/gi, "The kit")
+}
+log(replaceF("Home, Home, Welcome", "Home"));
+
+
+////////OBJECTS!!!!---->>Prototypes
+
+Object.prototype.laptop = "Blue, Notebook, Low"
+
+//log(laptop);
+var punct = {
+    x: 3,
+    y: 6,
+
+}
+punct.z = 5;
+var P = 4;
+//log(P.laptop);
+
+
+
+var abc = "blue"
+
+//--------Parcurgem lista
+
+var hobbies = ["music", "somn"]
+
+var randomStuff = [22, 'ceva', true, ['biking', 'cooking'], undefined, null];
+//sa-l chemi
+randomStuff[2]//->> true
+randomStuff[3][1]//--> 'cooking'
+randomStuff[randomStuff.length - 1]//--> ultimul element (null)
+randomStuff//[orice calcul/functie~care rezultat se duce la pozitia din lista]
+
+
+//metoda prin care sa parcurga lista
+
+//for(var i = o; i < randomStuff.length; i+=1){
+
+//}
+//Passi
+//var i=0 creas
+
+
+var listaMea = ["litere", 123, "oua", "carne"]
+for (var i = 0; i < listaMea.length; i += 1) {
+    console.log(listaMea[i]);
+}
+
+var daysOfTheWeek = ["Monday", "Tuesday", "Wednesday", "Thursday", "Saturday", "Sunday"]
+function isDayOfTheWeek(day) {
+    for (var i = 0; i < daysOfTheWeek.length + 1; i++) {
+        if (day === daysOfTheWeek[i]) { return true }
+
+
+    }
+    return false;
+}
+log(isDayOfTheWeek())
+
+//String in string
+
+//Input: a string & array of names
+//Output: all names the contain the string
+
+function search(str, list) {
+    var gol = []
+    for (var i = 0; i < list.length; i += 1) {
+        if (list[i].includes(str)) {
+            gol.push(list[i])
+
+        }
+
+    }
+    return gol;
+}
+//log(search(str, [list]))
+///
+function search(str, list) {
+    var gol = []
+    for (var i = 0; i < list.length; i += 1) {
+        if (list[i].startsWith(str)) {
+            gol.push(list[i])
+
+        }
+
+    }
+    return gol;
+}
+log(search('alex', ['balex', 'alexandru', 'bob']))
+
+//Ex3
+// input: number & a list of numbers
+//Output: only the numbers of the list wich divide with the number parameter
+
+function filterDivide(nr1, nr2) {
+    var gol = []
+    for (var i = 0; i < nr2.length; i += 1) {
+
+        if (nr2[i] % nr1 !== 0) {
+            gol.push(nr2[i])
+        }
+
+    }
+    return gol;
+}
+log(filterDivide(11, [22, 3, 55, 66]));
+
+///
+
+function reverse(list) {
+    var rezultat = []
+    for (var i = list.length - 1; i >= 0; i--) {
+        rezultat.push(list[i]);
+    }
+    return rezultat;
+
+}
+log(reverse([3, 2, 1, 0]))
+
+function giveMe(A1, A2) {
+    var rezultat = [];
+    for (var i = A1; i <= A2; i++) {
+        rezultat.push(i)
+    }
+    return rezultat;
+}
+
+log(giveMe(10, 20))
+
+///////Ordoneaza crescator
+ function newList(list, num) {
+    var rezultat = [num];
+    for (var i = 0; i < list.length; i++) {
+      rezultat[i + 1] = list[i];
+    }
+      return rezultat;
+  }
+  
+  log(newList([3, 2, 1, 0], 4));
+
