@@ -30,10 +30,22 @@ var names = [
 // Pas 1: punem mana pe elementele necesare
 var myInput = document.getElementById('searchInput');
 var myList = document.getElementById('nameList');
+//my part xD
+var list = document.getElementById('nList');
+list.style.display = "none"
+function loadList(){
+    list.style.display = "block"
+};
+
+for (var i = 0; i < names.length; i++){
+    myList.innerHTML += "<li>" + names[i] + "</li>";
+}
+//\\\\\\
 // var myButton = document.getElementById('deleteButton');
 
 // Pas 2: ne legam la eventul de scris ('input')
 myInput.addEventListener('input', onType);
+
 
 function onType() {
     // input.value -- asa pun mana pe ce se afla scris intr-un input
