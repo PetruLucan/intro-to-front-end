@@ -4,11 +4,11 @@
 
 <head>
     <title> Twitter </title>
-    <meta charset="UTF-8" />
-    <meta name="Description" content="The Kit Team" />
-    <link rel="stylesheet" href="style.css" />
-    <link href="link href=" https://fonts.googleapis.com/css?family=Fredoka+One " rel="stylesheet ">" </head>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="UTF-8"/>
+    <meta name="Description" content="The Kit Team"/>
+    <link rel="stylesheet" href="style.css"/>
+    <link href="link href=" https://fonts.googleapis.com/css?family=Fredoka+One " rel="stylesheet>" </head>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 
 </head>
 
@@ -23,11 +23,12 @@
     <div class="container" id="right">
         <form class="" id="logIn">
             <div class="inline vertical-top">
-                <input placeholder="Phone, email or username" type="text">
+                <input id="phoneTop" placeholder="Phone, email or username" type="text"></input>
                 <span class="errorMessage"> Incorrect password </span>
             </div>
-            <input placeholder="Password" type="password">
-            <button type="submit"> Log In </button>
+            <input id="passTop" placeholder="Password" type="password"></input>
+            <button id="logInTop" type="button"> Log In </button>
+            <button id="tButton" class="Remove" value="Reveal" type="button">Toogle</button>
         </form>
         <form class="" id="signUp">
             <p>
@@ -37,11 +38,11 @@
             <p>
                 Join Twitter today
             </p>
-            <input placeholder="Phone or email" type="text">
+            <input id="phone" placeholder="Phone or email" type="text">
             <p class="errorMessage"> Please enter a valid email </p>
-            <input placeholder="Password" type="password">
+            <input id="pass" placeholder="Password" type="password">
             <p class="errorMessage"> Please enter a valid email </p>
-            <button id="signUpButton" type="submit"> Get Started </button>
+            <button id="signUpButton" type="button"> Get Started </button>
             <span id="line"> Have an account?
                 <a href="https://twitter.com/login"> Log in </a>
             </span>
@@ -54,6 +55,7 @@
             <li> Blog </li>
         </ul>
     </footer>
+    <script src="twitterJS.js"> </script>
 </body>
 
 </html>

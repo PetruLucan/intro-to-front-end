@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title> Semafor </title>
+    <meta charset="UTF-8">
+
+</head>
+
+<body>
+    <div>
+        <button id="noClass" type="button">Add Class</button>
+        
+        <form id="formId"class="">
+            <input id="red">
+            <input class="" id="yellow">
+            <input class="" id="green">
+
+        </form>
+    </div>
+    <style>
+        input {
+            display: block;
+            width: 100px;
+            height:100px;
+            border: 0.5px solid;
+        }
+
+        #red {
+            background-color: red;
+        }
+
+        form.defaultYellow #red,
+        form.defaultYellow #green {
+            background-color: white;
+        }
+
+        form.defaultYellow #yellow {
+            background-color: yellow;
+        }
+
+        form.defaultGreen #red,
+        form.defaultGreen #yellow {
+            background-color: white;
+        }
+
+        form.defaultGreen #green {
+            background-color: green;
+        }
+    </style>
+    <script src="semaforJS.js"></script>
+</body>
+
+</html>

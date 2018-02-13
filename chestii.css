@@ -1,0 +1,73 @@
+
+.comun{
+    border: 2px solid grey;
+    height:140px;
+    margin:5px 3px;
+    display:inline-block;
+    position:relative;
+    
+}
+
+#scndDiv {
+    
+    width: 26%;
+    
+}
+#frstDiv{
+    
+    width: 70%;
+    }
+#trdDiv{
+    
+    width: 97%;
+    }
+#forthDiv{
+    
+    width: 48%;
+    }
+#fifthDiv{
+    
+    width: 48%;
+    }
+#sixthDiv{
+    
+    width: 68%;
+    }
+#svnthDiv{
+    
+    width: 28%;
+    }
+.comun .grape{
+    display:none;
+
+}
+.comun.right .grape{
+    display:initial;
+    position: absolute;
+    bottom:50%;
+    right:0;
+
+}
+.comun.bottom .grape{
+    display:initial;
+    position: absolute;
+    bottom:0;
+    right:50%;
+  
+   
+}
+.comun.bottom.right .grape{
+    display:initial;
+    position: absolute;
+    bottom:0;
+    right:0;
+    
+}
+
+@media (max-width:400px){
+     .comun{
+        width: 100% !important;
+        display:block;
+     }
+    }
+
